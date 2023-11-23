@@ -1,6 +1,7 @@
 {
     "name": "grebo87/laravel-vtex-api",
     "description": "Provides a seamless integration between Laravel and the VTEX API.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Grebo87\\LaravelVtexApi\\": "src/"
