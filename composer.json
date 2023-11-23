@@ -1,0 +1,29 @@
+{
+    "name": "grebo87/laravel-vtex-api",
+    "description": "Provides a seamless integration between Laravel and the VTEX API.",
+    "autoload": {
+        "psr-4": {
+            "Grebo87\\LaravelVtexApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "grebo87",
+            "email": "grebodeveloper@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel" : {
+            "providers" : [
+                "Grebo87\\LaravelVtexApi\\VtexServiceProvider"
+            ],
+            "aliases": {
+                "Brand": "Grebo87\\LaravelVtexApi\\Facades\\Brand",
+                "Category": "Grebo87\\LaravelVtexApi\\Facades\\Category",
+                "CategorySpecification": "Grebo87\\LaravelVtexApi\\Facades\\CategorySpecification",
+                "SpecificationGroup": "Grebo87\\LaravelVtexApi\\Facades\\SpecificationGroup"
+            }
+        }
+    }
+}
