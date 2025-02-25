@@ -3,6 +3,8 @@
 namespace Grebo87\LaravelVtexApi\Providers;
 
 use Grebo87\LaravelVtexApi\Services\Catalog\BrandService;
+use Grebo87\LaravelVtexApi\Services\Catalog\CategoryService;
+use Grebo87\LaravelVtexApi\Services\Catalog\CategorySpecificationService;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelVtexApiServiceProvider extends ServiceProvider
@@ -14,11 +16,15 @@ class LaravelVtexApiServiceProvider extends ServiceProvider
 
         // Register services
         $this->app->singleton(BrandService::class, function ($app) {
-            return new BrandService(
-                config('vtex.base_url'),
-                config('vtex.app_key'),
-                config('vtex.app_token')
-            );
+            return new BrandService();
+        });
+
+        $this->app->singleton(CategoryService::class, function ($app) {
+            return new CategoryService();
+        });
+
+        $this->app->singleton(CategorySpecificationService::class, function ($app) {
+            return new CategorySpecificationService();
         });
     }
 

@@ -1,8 +1,43 @@
-vendor/
+# Dependencies
+/vendor/
 composer.lock
 
-# Scripts y archivos de pruebas locales
+# IDE & Editors
+/.idea
+/.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Cache files
+.php_cs.cache
+.phpunit.result.cache
+.phpunit.cache
+
+# Local development
+/.env
+/.env.backup
+/.env.local
+
+# Testing
 test-with
 test-all
 composer.json.backup
-*.cache
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+/temp/*
+!temp/postman-collection.json
+*.tmp
+*.swp
+*.swo
