@@ -1,0 +1,8 @@
+vendor/
+composer.lock
+
+# Scripts y archivos de pruebas locales
+test-with
+test-all
+composer.json.backup
+*.cache

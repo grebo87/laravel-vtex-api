@@ -1,0 +1,80 @@
+{
+    "name": "grebo87/laravel-vtex-api",
+    "description": "Provides a seamless integration between Laravel and the VTEX API.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "vtex",
+        "api",
+        "ecommerce",
+        "integration"
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/grebo87/laravel-vtex-api/issues",
+        "source": "https://github.com/grebo87/laravel-vtex-api"
+    },
+    "authors": [
+        {
+            "name": "grebo87",
+            "email": "grebodeveloper@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0|^10.0|^11.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "spatie/laravel-data": "^3.0|^4.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grebo87\\LaravelVtexApi\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Grebo87\\LaravelVtexApi\\Providers\\LaravelVtexApiServiceProvider"
+            ],
+            "aliases": {
+                "Brand": "Grebo87\\LaravelVtexApi\\Facades\\Brand"
+            }
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Grebo87\\LaravelVtexApi\\VtexServiceProvider"
+            ],
+            "aliases": {
+                "Brand": "Grebo87\\LaravelVtexApi\\Facades\\Brand",
+                "Category": "Grebo87\\LaravelVtexApi\\Facades\\Category",
+                "CategorySpecification": "Grebo87\\LaravelVtexApi\\Facades\\CategorySpecification",
+                "SpecificationGroup": "Grebo87\\LaravelVtexApi\\Facades\\SpecificationGroup"
+            }
+        },
+        "branch-alias": {
+            "dev-v1": "1.x-dev",
+            "dev-v2": "2.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
